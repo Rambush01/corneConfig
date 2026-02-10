@@ -9,27 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        tdjz: tap_dance_jz {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&kp Z>;
-        };
-
-        tdgq: tap_dance_gq {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp Q>;
-        };
-
-        tdjz_2: tdjz_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDJZ_2";
-            #binding-cells = <0>;
-            bindings = <&kp J>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -42,10 +21,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &tdjz_2  &tdgq  &kp M     &kp P  &kp V    &kp SLASH        &kp DOT  &kp SEMI  &kp DQT  &kp SQT  &kp BSPC
-&kp LCTRL  &kp R    &kp S  &kp N     &kp D  &kp B    &kp COMMA        &kp A    &kp E     &kp I    &kp H    &kp RCTRL
-&kp LSHFT  &kp X    &kp F  &kp L     &kp C  &kp W    &kp MINUS        &kp U    &kp O     &kp Y    &kp K    &kp ESC
-                           &kp LGUI  &mo 1  &kp T    &mt RSHFT SPACE  &mo 2    &kp RALT
+&kp TAB    &none  &none  &kp M     &kp P  &kp V    &kp SLASH        &kp DOT  &kp SEMI  &kp DQT  &kp SQT  &kp BSPC
+&kp LCTRL  &kp R  &kp S  &kp N     &kp D  &kp B    &kp COMMA        &kp A    &kp E     &kp I    &kp H    &kp RCTRL
+&kp LSHFT  &kp X  &kp F  &kp L     &kp C  &kp W    &kp MINUS        &kp U    &kp O     &kp Y    &kp K    &kp ESC
+                         &kp LGUI  &mo 1  &kp T    &mt RSHFT SPACE  &mo 2    &kp RALT
             >;
         };
 
